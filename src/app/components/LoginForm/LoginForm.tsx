@@ -18,7 +18,7 @@ const LoginForm: FC<IProp> = ({ action }) => {
   console.log("state: ", state, "pending: ", pending);
   return (
     <form
-      className="bg-[#1E1E1E] flex flex-col w-150 h-160 items-center gap-5 pt-10 rounded-2xl"
+      className="bg-[#1E1E1E] flex flex-col w-150 h-160 items-center gap-5 pt-10 rounded-2xl select-none"
       action={formAction}
     >
       <h1 className="text-3xl">Login</h1>
@@ -39,7 +39,7 @@ const LoginForm: FC<IProp> = ({ action }) => {
       </div>
       <SubmitBTN />
       <Link
-        className="text-[#B0B0B0] hover:text-[#00C4B3] hover:translate-y-[2px] transition-all px-4 rounded-2xl"
+        className="text-[#B0B0B0] hover:text-[#00C4B3] hover:translate-y-[-2px] transition-all px-4 rounded-2xl"
         href={"/"}
       >
         برگشت به خانه

@@ -6,7 +6,7 @@ const SubmitBTN = () => {
   const { pending } = useFormStatus();
   return (
     <button
-      className="bg-[#BB86FC] px-5 py-2 text-2xl rounded-2xl shadow-[#1E1E1E] hover:cursor-pointer hover:bg-[#CF9BFF] hover:text-[#F8F8F8] disabled:opacity-60 disabled:cursor-not-allowed"
+      className="bg-[#BB86FC] px-5 py-2 text-2xl rounded-2xl shadow-[#1E1E1E] hover:cursor-pointer hover:bg-[#CF9BFF] hover:text-[#F8F8F8] hover:scale-93 disabled:hover:scale-100 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
       type="submit"
       disabled={pending}
     >

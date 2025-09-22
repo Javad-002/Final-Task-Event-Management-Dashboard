@@ -21,10 +21,14 @@ const page = async () => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-3xl select-none">ایونت ها</h1>
-      <div className="w-full border-t border-[#2E2E2E] flex flex-wrap gap-5 p-5">
+      <div className="w-2/4 border-t border-[#2E2E2E] flex flex-wrap gap-5 p-5 justify-center">
         {events.map((value) => (
+          <>
           <EventCard key={value.id} value={value} />
+          </>
         ))}
+          
+
       </div>
     </div>
   );
