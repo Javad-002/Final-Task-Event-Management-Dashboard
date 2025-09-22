@@ -1,4 +1,3 @@
-import React from "react";
 import { IEvent } from "../core/types/Ievent";
 import { EventCard } from "../components/EventCard/EventCard";
 

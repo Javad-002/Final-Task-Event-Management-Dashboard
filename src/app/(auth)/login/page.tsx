@@ -2,7 +2,6 @@ import PasswordField from "@/app/components/PasswordField/PasswordField";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import React from "react";
 
 const page = () => {
   const login = async (formData: FormData) => {

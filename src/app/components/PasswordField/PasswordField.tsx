@@ -1,6 +1,6 @@
 "use client"
 
-import { InputEvent, useRef, useState } from "react";
+import {useState} from "react";
 
 const PasswordField = () => {
     const [ShowPassword, setShowPassword] = useState(false)
