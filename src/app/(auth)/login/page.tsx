@@ -1,10 +1,15 @@
-import PasswordField from "@/app/components/PasswordField/PasswordField";
+import { LoginForm } from "@/app/components/LoginForm/LoginForm";
 import { cookies } from "next/headers";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 
-const page = () => {
-  const login = async (formData: FormData) => {
+  export interface ILoginResponse {
+    message: string;
+  }
+
+  const login = async (
+    prevState: ILoginResponse,
+    formData: FormData
+  ): Promise<ILoginResponse> => {
     "use server";
     const userName = formData.get("userName");
     const password = formData.get("password");
@@ -13,44 +18,13 @@ const page = () => {
       cookieStore.set("token", "GlnsKLsrtSpsQABJN8kmO+VHIkcdTJCcxxm0sqo+ltk");
       redirect("/dashboard");
     }
+    return {message:"نام کاربری یا رمز عبور اشتباه است"}
   };
 
+const page = () => {
   return (
     <div className="w-full flex justify-center p-5">
-      <form
-        className="bg-[#1E1E1E] flex flex-col w-150 h-160 items-center gap-5 pt-10 rounded-2xl"
-        action={login}
-      >
-        <h1 className="text-3xl">Login</h1>
-        <span className="text-xl w-3/4 text-right">:نام کاربری</span>
-        <input
-          className="bg-[#2C2C2C] w-3/4 h-fit p-3 text-lg rounded-xl focus:outline-2 focus:outline-[#BB86FC]"
-          type="text"
-          placeholder="UserName..."
-          name="userName"
-          id="PasswordField"
-        />
-        <span className="text-xl w-3/4 text-right">:رمز عبور</span>
-        <PasswordField />
-
-        <div className="bg-[#2C2C2C] w-3/4 p-2 text-[#B0B0B0]">
-          <p>userName: admin</p>
-          <p>password: password</p>
-        </div>
-
-        <button
-          className="bg-[#BB86FC] px-5 py-2 text-2xl rounded-2xl shadow-[#1E1E1E] hover:cursor-pointer hover:bg-[#CF9BFF] hover:text-[#F8F8F8]"
-          type="submit"
-        >
-          ورود
-        </button>
-        <Link
-          className="text-[#B0B0B0] hover:text-[#00C4B3] hover:translate-y-[2px] transition-all px-4 rounded-2xl"
-          href={"/"}
-        >
-          برگشت به خانه
-        </Link>
-      </form>
+      <LoginForm action={login} />
     </div>
   );
 };
