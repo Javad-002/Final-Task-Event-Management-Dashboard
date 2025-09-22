@@ -9,4 +9,5 @@ export interface IEvent {
   id: string;
   organizerId: string;
   imageAddress: string;
+  message:string;
 }

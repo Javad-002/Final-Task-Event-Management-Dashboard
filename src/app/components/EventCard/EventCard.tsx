@@ -8,7 +8,7 @@ interface IProp {
 
 const EventCard: FC<IProp> = ({value}) => {
   return (
-    <div className="bg-[#1E1E1E] w-fit p-5">
+    <div className="bg-[#1E1E1E] w-fit p-5 hover:translate-y-[-6px] transition-all hover:cursor-pointer">
       <Image src={value.imageAddress} alt={`${value.title} Photo`} width={200} height={200}/>
       <h5>Title: {value.title}</h5>
       <p className="text-[#B0B0B0]">Description: {value.description}</p>
