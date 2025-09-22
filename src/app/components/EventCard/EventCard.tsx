@@ -1,4 +1,5 @@
-import { IEvent } from "@/app/core/types/Ievent";
+
+import { IEvent } from "@/core/types/Ievent";
 import Image from "next/image";
 import { FC } from "react";
 

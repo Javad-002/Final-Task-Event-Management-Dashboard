@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "./components/Header/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const lalezar = localFont({
   src: [
-    { path: "../app/assets/font/Lalezar-Regular.ttf", weight: "500" },
+    { path: "../assets/font/Lalezar-Regular.ttf", weight: "500" },
   ],
 });
 

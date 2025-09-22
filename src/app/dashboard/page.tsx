@@ -1,4 +1,4 @@
-import { IEvent } from "../core/types/Ievent";
+import { IEvent } from "../../core/types/Ievent";
 import { EventCard } from "../components/EventCard/EventCard";
 
 const page = async () => {
